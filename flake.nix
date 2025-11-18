@@ -16,17 +16,14 @@
         pname = "sprite-editor";
         version = "1.0";
 
-        # your project directory
         src = ./.;
 
-        # qmake6, rcc, moc, uic
         nativeBuildInputs = [
           pkgs.qt6.qmake
           pkgs.qt6.qttools
           pkgs.qt6.wrapQtAppsHook
         ];
 
-        # Qt6 core GUI libraries
         buildInputs = [
           pkgs.qt6.qtbase
         ];
