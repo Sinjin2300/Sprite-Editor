@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>View</class>
+ <widget class="QMainWindow" name="View">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1279</width>
+    <height>642</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1279</width>
+    <height>642</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1279</width>
+    <height>642</height>
+   </size>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>200</red>
+        <green>200</green>
+        <blue>179</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>200</red>
+        <green>200</green>
+        <blue>179</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>200</red>
+        <green>200</green>
+        <blue>179</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>200</red>
+        <green>200</green>
+        <blue>179</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>200</red>
+        <green>200</green>
+        <blue>179</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>200</red>
+        <green>200</green>
+        <blue>179</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>200</red>
+        <green>200</green>
+        <blue>179</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>200</red>
+        <green>200</green>
+        <blue>179</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>200</red>
+        <green>200</green>
+        <blue>179</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="windowTitle">
+   <string>SpriteEditor</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(200, 200, 179);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(60, 60, 60);</string>
+   </property>
+   <widget class="QPushButton" name="CustomColorButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>270</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+background-color: white;</string>
+    </property>
+    <property name="text">
+     <string>Select color</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="AnimationFrame">
+    <property name="geometry">
+     <rect>
+      <x>1020</x>
+      <y>0</y>
+      <width>251</width>
+      <height>311</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="FramesPerSecond">
+    <property name="geometry">
+     <rect>
+      <x>1220</x>
+      <y>310</y>
+      <width>51</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font color = black</string>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>30</number>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="SetFrames">
+    <property name="geometry">
+     <rect>
+      <x>1020</x>
+      <y>310</y>
+      <width>201</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+background-color: white;
+</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Set frames per second&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ScrollLeft">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>490</y>
+      <width>16</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Black</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+background-color: white;</string>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ScrollRight">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>490</y>
+      <width>16</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Black</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+background-color: white;</string>
+    </property>
+    <property name="text">
+     <string>&gt;</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>194</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="Toolbox">
+     <item row="1" column="1">
+      <widget class="QToolButton" name="BucketButton">
+       <property name="minimumSize">
+        <size>
+         <width>75</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>75</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font color = black</string>
+       </property>
+       <property name="text">
+        <string>Paint Bucket</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QToolButton" name="EraserButton">
+       <property name="minimumSize">
+        <size>
+         <width>75</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>75</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font color = black</string>
+       </property>
+       <property name="text">
+        <string>Eraser</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QToolButton" name="CursorButton">
+       <property name="minimumSize">
+        <size>
+         <width>75</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>75</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font color = black</string>
+       </property>
+       <property name="text">
+        <string>Cursor</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QToolButton" name="PenButton">
+       <property name="minimumSize">
+        <size>
+         <width>75</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>75</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font color =black</string>
+       </property>
+       <property name="text">
+        <string>Pen Tool</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QScrollArea" name="scrollAreaOfFrameMenu">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>490</y>
+      <width>771</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAsNeeded</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>769</width>
+       <height>99</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout"/>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="PreviewLabel">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>10</y>
+      <width>231</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QScrollArea" name="layerContainer">
+    <property name="geometry">
+     <rect>
+      <x>1020</x>
+      <y>340</y>
+      <width>251</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>249</width>
+       <height>249</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <stylestrategy>NoAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="ImageEditor">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>10</y>
+      <width>480</width>
+      <height>480</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>480</width>
+      <height>480</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>480</width>
+      <height>480</height>
+     </size>
+    </property>
+    <property name="cursor">
+     <cursorShape>CrossCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="OpacityBox">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>340</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="singleStep">
+     <number>5</number>
+    </property>
+    <property name="value">
+     <number>255</number>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="SetOpacity">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>340</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+background-color: white;
+</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Set opacity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1279</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: black;</string>
+   </property>
+   <widget class="QMenu" name="filemenu">
+    <property name="styleSheet">
+     <string notr="true">color: black;</string>
+    </property>
+    <property name="title">
+     <string>File</string>
+    </property>
+    <property name="separatorsCollapsible">
+     <bool>false</bool>
+    </property>
+    <widget class="QMenu" name="menuExport_Frame_s">
+     <property name="title">
+      <string>Export Frame(s)</string>
+     </property>
+     <addaction name="actionGif_Export"/>
+     <addaction name="actionFrame_as_PNG"/>
+    </widget>
+    <addaction name="SaveProjectAction"/>
+    <addaction name="LoadProjectAction"/>
+    <addaction name="menuExport_Frame_s"/>
+    <addaction name="NewProjectAction"/>
+   </widget>
+   <widget class="QMenu" name="layermenu">
+    <property name="title">
+     <string>Layer</string>
+    </property>
+    <addaction name="actionAdd_Blank_Layer_Below"/>
+    <addaction name="separator"/>
+    <addaction name="actionMove_Selected_Layer_Up"/>
+    <addaction name="actionMove_Selected_Layer_Down"/>
+    <addaction name="actionDelete_Selected_Layer"/>
+   </widget>
+   <widget class="QMenu" name="menuFrame">
+    <property name="title">
+     <string>Frame</string>
+    </property>
+    <addaction name="actionAdd_a_new_frame"/>
+    <addaction name="actionRemove_current_frame"/>
+    <addaction name="separator"/>
+    <addaction name="actionDuplicate_current_frame"/>
+   </widget>
+   <addaction name="filemenu"/>
+   <addaction name="layermenu"/>
+   <addaction name="menuFrame"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="SaveProjectAction">
+   <property name="text">
+    <string>Save Project</string>
+   </property>
+  </action>
+  <action name="LoadProjectAction">
+   <property name="text">
+    <string>Load Project</string>
+   </property>
+  </action>
+  <action name="actionAdd_Blank_Layer_Below">
+   <property name="text">
+    <string>Add Blank Layer Below</string>
+   </property>
+  </action>
+  <action name="actionCopy_Selected_Layer_Below">
+   <property name="text">
+    <string>Copy Selected Layer Below</string>
+   </property>
+  </action>
+  <action name="actionMove_Selected_Layer_Up">
+   <property name="text">
+    <string>Move Selected Layer Up</string>
+   </property>
+  </action>
+  <action name="actionMove_Selected_Layer_Down">
+   <property name="text">
+    <string>Move Selected Layer Down</string>
+   </property>
+  </action>
+  <action name="actionDelete_Selected_Layer">
+   <property name="text">
+    <string>Delete Selected Layer</string>
+   </property>
+  </action>
+  <action name="actionRenameLayer">
+   <property name="text">
+    <string>Rename Layer</string>
+   </property>
+  </action>
+  <action name="actionAdd_a_new_frame">
+   <property name="text">
+    <string>Add a new frame</string>
+   </property>
+  </action>
+  <action name="actionRemove_current_frame">
+   <property name="text">
+    <string>Remove current frame</string>
+   </property>
+  </action>
+  <action name="actionDuplicate_current_frame">
+   <property name="text">
+    <string>Copy current frame on a new Frame</string>
+   </property>
+  </action>
+  <action name="actionPaste_into_current_frame">
+   <property name="text">
+    <string>Paste into current frame</string>
+   </property>
+  </action>
+  <action name="NewProjectAction">
+   <property name="text">
+    <string>New Project</string>
+   </property>
+  </action>
+  <action name="actionSelected_Frame_PNG">
+   <property name="text">
+    <string>Selected Frame PNG</string>
+   </property>
+  </action>
+  <action name="actionGIF_Collection">
+   <property name="text">
+    <string>GIF Collection</string>
+   </property>
+  </action>
+  <action name="actionGif_Export">
+   <property name="text">
+    <string>Gif Export</string>
+   </property>
+  </action>
+  <action name="actionFrame_as_PNG">
+   <property name="text">
+    <string>Frame as PNG</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

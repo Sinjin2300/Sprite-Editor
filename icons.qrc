@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>Cursor.png</file>
+        <file>Eraser.png</file>
+        <file>Pen.png</file>
+        <file>Bucket.png</file>
+    </qresource>
+</RCC>
