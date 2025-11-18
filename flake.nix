@@ -8,35 +8,49 @@
   outputs =
     { nixpkgs, ... }:
     let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
+
+      forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
-      packages.${system}.default = pkgs.stdenv.mkDerivation {
-        pname = "sprite-editor";
-        version = "1.0";
+      packages = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+        in
+        {
+          default = pkgs.stdenv.mkDerivation {
+            pname = "sprite-editor";
+            version = "1.0";
 
-        src = ./.;
+            src = ./.;
 
-        nativeBuildInputs = [
-          pkgs.qt6.qmake
-          pkgs.qt6.qttools
-          pkgs.qt6.wrapQtAppsHook
-        ];
+            nativeBuildInputs = [
+              pkgs.qt6.qmake
+              pkgs.qt6.qttools
+              pkgs.qt6.wrapQtAppsHook
+            ];
 
-        buildInputs = [
-          pkgs.qt6.qtbase
-        ];
+            buildInputs = [
+              pkgs.qt6.qtbase
+            ];
 
-        buildPhase = ''
-          qmake6 Sprite_Editor.pro
-          make
-        '';
+            buildPhase = ''
+              qmake6 Sprite_Editor.pro
+              make
+            '';
 
-        installPhase = ''
-          mkdir -p $out/bin
-          install -m755  "Sprite_Editor" $out/bin/sprite-editor
-        '';
-      };
+            installPhase = ''
+              mkdir -p $out/bin
+              install -m755 "Sprite_Editor" $out/bin/sprite-editor
+            '';
+          };
+        }
+      );
     };
 }
