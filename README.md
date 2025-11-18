@@ -9,7 +9,7 @@ with nix packaging.
 - 🖌️ Pixel-by-pixel editing
 - 💻 Gif Exporting
 - 🖼️ Multiple layer support
-- 📦 Qt Designer–based UI
+- 📦 Saving and Loading Project States
 - 🔧 Reproducible builds via Nix Flakes
 
 ## 🚀 Running with Nix
